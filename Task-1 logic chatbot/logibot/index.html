@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Logibot — Logic-based Chatbot</title>
+<meta name="description" content="A logic-based chatbot with programming & AI Q&A, jokes, quotes, dark mode, and session stats." />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app" id="app">
+    <header class="header">
+      <div class="brand">
+        <div class="logo">🤖</div>
+        <div>
+          <h1>Logibot</h1>
+          <p class="tag">Logic-based assistant</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button id="statsBtn" class="btn ghost" title="Stats">📊</button>
+        <button id="themeBtn" class="btn ghost" title="Toggle theme">🌙</button>
+        <button id="clearBtn" class="btn ghost" title="Clear chat">🗑️</button>
+      </div>
+    </header>
+
+    <main class="chat" id="chat"></main>
+
+    <div id="stats" class="stats hidden">
+      <div><strong>Questions asked:</strong> <span id="qCount">0</span></div>
+      <div><strong>Session duration:</strong> <span id="duration">0s</span></div>
+      <div><strong>Your name:</strong> <span id="userName">—</span></div>
+    </div>
+
+    <form class="composer" id="composer">
+      <input id="input" type="text" placeholder="Type a message… (try 'help', 'joke', 'python')" autocomplete="off" />
+      <button type="submit" class="btn primary">Send ➤</button>
+    </form>
+  </div>
+
+  <script src="chatbot-engine.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
